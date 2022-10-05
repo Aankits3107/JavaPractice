@@ -1,2 +1,2 @@
 # JavaPractice
-For Practicing java and to learn git.
+For practicing java and to learn git.
