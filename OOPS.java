@@ -1,4 +1,3 @@
-import java.util.*;
 class Pen {
     String color;
     String type; //ballpoint, gelpoint.
