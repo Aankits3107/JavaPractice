@@ -24,7 +24,6 @@ public class LinkedListVsArrayList {
             namesLinkedList.add(1, "Jerry");
                 System.out.println(namesLinkedList);
 
-        String[] names = new String[4];
         ArrayList<String> namesArrayList = new ArrayList<>();
             namesArrayList.add("Ankit");
             namesArrayList.add("Sunny");
