@@ -1,5 +1,3 @@
-import org.omg.CORBA.SystemException;
-
 public class OutterClass {
     int number = 6;
 
