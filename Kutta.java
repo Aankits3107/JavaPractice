@@ -18,4 +18,11 @@ public class Kutta extends Janvar {
             System.out.println("chomp chomp");
         }
     }
+    public void makeNoise() {
+        //super.makeNoise();
+            System.out.println("Wouf Wouf");
+    }
+    public void growl() {
+            System.out.println("Grrrr");
+    }
 }

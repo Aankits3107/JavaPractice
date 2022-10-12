@@ -24,9 +24,9 @@ public class Bille extends Janvar{
 
     @Override
     public void makeNoise() {
-        super.makeNoise(); //parent class/super class method will be called first. as super is called.
+        //super.makeNoise(); //parent class/super class method will be called first. as super is called.
             System.out.println("Meoa Meow Meow");
-        eat(); //can be used without(super keyword) super class implementation. Because this class isn't overriding the super class's implementaion of the eat method. By default jus calling eat will get us the animal class implementation of parent class implementations.
+        //eat(); //can be used without(super keyword) super class implementation. Because this class isn't overriding the super class's implementaion of the eat method. By default jus calling eat will get us the animal class implementation of parent class implementations.
     }
 
 }
