@@ -9,5 +9,5 @@ public class Constants {
 
     public static final int NUMBER_OF_DAYS_IN_A_WEEK = 7;
 
-    public static final String MY_NAME = "Marsh Melow";
+    public static final String MY_DOG_NAME = "Marsh Melow";
 }
