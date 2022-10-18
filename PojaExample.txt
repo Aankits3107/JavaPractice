@@ -1,5 +1,0 @@
-POJO - Plain old java objects. ;) :P
-Can't extends a nother class - no extends - no implemenents, no out side annotations or liberaries.
-Java bean is not a pojo.
-A bean has to have no-args constructor, properties must be private, public getters & setters, must be serializable. 
-
