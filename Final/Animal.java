@@ -1,6 +1,8 @@
 package Final;
 
-public class Animal {     
+// public final class Animal {  // final class 
+public class Animal {  
+    // public final void eat() { //final method
     public void eat() {
         System.out.println("muunch");
     }

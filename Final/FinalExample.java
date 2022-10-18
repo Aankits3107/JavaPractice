@@ -8,10 +8,14 @@
 package Final;
 
 public class FinalExample {
-    public static final double PI = 3.14159;
+    public static final double PI = 3.14159; // constant
     public static void main(String[] args) {
-        final Dog myDog;
-        myDog = new Dog();
-        myDog.eat(2);        
+        // Dog myDog = new Dog();
+        final Dog myDog; //final variable
+        myDog = new Dog(); //instantiating into a different line, once assigned cant be assigned again.
+        myDog.eat();  
+        
+        // final double pi = 3.14159; // final value
+            System.out.println(PI*3);
     }
 }
