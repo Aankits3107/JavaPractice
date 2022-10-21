@@ -2,12 +2,12 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class Main {
+public class StepCounter {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
             System.out.println("How far do you want to walk (meters) ? :");
         int distance = scan.nextInt();
-
+        scan.close();
         takeAStep(0, distance);
     }
 
