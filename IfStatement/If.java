@@ -1,7 +1,7 @@
 //to perform a block og code if it's condition evaluate to be ture.
 //very basic statement for decision making
-// > -greater than , < -lesser than , == -comparing two object --Comparision operator
-//= -seting a value --asssigning operator
+// > -greater than , < -lesser than , == -comparing two object --Comparision operators
+// = -seting a value --asssigning operator
 
 package IfStatement;
 
