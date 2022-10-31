@@ -1,6 +1,7 @@
 //for-each - traversing technique to iterate through the elements in an array/collection.
 // advantage - less stpes, more redable than normal for loop.
 // disadvantage - less flexible
+// also called enhanced for loop.
 
 package Loops;
 
