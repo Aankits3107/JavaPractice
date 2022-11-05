@@ -1,5 +1,5 @@
 package Variables;
- //error: as random & number both are local variable to the cinstructor DiceRoller, they are not accessibale here. To solve this either declare them globaly in the class or pass them as arrgument & perameters in the method where its called upon.
+ //error: as random & number both are local variable to the constructor DiceRoller, they are not accessibale here. To solve this either declare them globaly in the class or pass them as arrgument & parameters in the method where its called upon.
 
 import java.util.Random;
 
