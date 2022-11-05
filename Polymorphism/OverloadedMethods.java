@@ -5,7 +5,7 @@
 
 package Polymorphism;
 
-public abstract class Overload {
+public abstract class OverloadedMethods {
     public static void main(String[] args) {
         int x = add(1, 2, 3, 4);
             System.out.println(x);
