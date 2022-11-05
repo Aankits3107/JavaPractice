@@ -19,10 +19,10 @@ public class Wrapper {
     public static void main(String[] args) {
         //autoboxing
         Boolean a = true;
-        Character b = '@';
-        Integer c  = 123;
-        Double d = 3.14519;
-        String e = "Ankit";
+        // Character b = '@';
+        // Integer c  = 123;
+        // Double d = 3.14519;
+        // String e = "Ankit";
 
         //unboxing
         if(a == true) {
