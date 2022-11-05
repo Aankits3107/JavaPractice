@@ -1,5 +1,5 @@
 // A collection.
-//Resizable arrau to store reference data types. Use wrapper class in array list <"WrapperClass">
+//Resizable array to store reference data types. Use wrapper class in array list <"WrapperClass">
 //Elements can be added or removed from it, after compilation phase.
 //with array we use array.lenght() but with array list we use arraylist.size().
 
