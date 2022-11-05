@@ -8,7 +8,7 @@ import java.util.*;
 public class TwoDeArrayListExample {
     public static void main(String[] args) {
 
-        ArrayList<ArrayList<String>> groceryList = new ArrayList(); // syntax of 2d array list
+        ArrayList<ArrayList<String>> groceryList = new ArrayList<>(); // syntax of 2d array list
 
         ArrayList<String> backeryList = new ArrayList<>();
         backeryList.add("Pasta");
