@@ -2,7 +2,7 @@
 //              Assign different attrubutes to each object we instanciate
 // Default constructors - created by java it self
 //Custom contructotrs - created by programers
-//Perametrized constructors - created by programers with perameters & attributes.
+//Parametrized constructors - created by programers with parameters & attributes.
 
 package Constructors;
 
