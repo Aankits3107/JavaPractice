@@ -2,6 +2,7 @@ package Polymorphism;
 
 public class Dog extends Animal {  
 
+    @Override
     public void eat() { //in polymorphism this eat method will 'override' the eat method from the animal class. Also known as runtime polymorphism
         System.out.println("Chomp Chomp"); //method in a child class overrides an method in it's parent class.
     }
@@ -11,7 +12,8 @@ public class Dog extends Animal {
             System.out.println("chomp chomp");
         }
     }
-    
+
+    @Override
     public void makeNoise() {
         //super.makeNoise();
             System.out.println("Wouf Wouf");
