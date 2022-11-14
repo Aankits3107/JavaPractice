@@ -7,13 +7,14 @@
 //Replace - only replace the current values, and updates it, but a put can replacve if exist and if not exist then it will add it in the map too.
 //putIfAbsent - update/add a key value pair only if it's not in map.
 
+
 package HashMaps;
 
 import java.util.HashMap;
 
 public class Map {
     public static void main(String[] args) {
-        HashMap<String, Integer> empIds = new HashMap<>(); //in older verions of java, we have to specify in the variables in the new hashmaps. But from java 7 n later just use <> operator and java will infer automaticaly from the object side which you declare.
+        HashMap<String, Integer> empIds = new HashMap<>(); //in older verions of java, we have to specify the variables in the new hashmaps. But from java 7 n later just use <> operator and java will infer automaticaly from the object side which you declare.
         empIds.put("Ankit", 12345);
         empIds.put("Sunny", 54321);
         empIds.put("Dev", 34522);
