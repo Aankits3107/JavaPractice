@@ -1,5 +1,5 @@
 //Only be used in certain types of interfaces.
-//Kind of like a contarcty that any class that implements that interface has to provide their own implementationsof the methods specify in that interface.
+//Kind of like a contarct that any class that implements that interface has to provide their own implementations of the methods specify in that interface.
 //Instead of passing in the object that contains a specific implementation of the  method, we're just passing in the specific implementaion of the method directly.
 //Access level don't require (public, protectd, etc.), method name also not require - only need what it does. Don't require a return type too bcz the complier can figure the return type automatically.
 //Only need is the prametres and the actuall method implementaions. And the arrow operators ->
