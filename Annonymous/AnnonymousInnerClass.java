@@ -5,7 +5,13 @@
 //Advantage - Helps us to avoid untidy code with a seprate class name
 //            Usefull in actionlistners.
 //Syntax is similar to a constructor, except that there is also a class defination within a block of code.
-
+//Annonymous Inner class vs Lambda Exception
+//      Annonymous Inner class Can extend a normal class
+//      Annonymous Inner class Can extend an abstarct class
+//      Annonymous Inner class Can implement an interface which contains any no of abstarct methods.
+//Lambda Expression can implement an interface which contains a single abstarct method(Functional Interface)
+//      Annonymous Inner class != Lambda Expression
+//      Annonymous Inner class > Lambda Expression
 package Annonymous;
 
 public class AnnonymousInnerClass {
