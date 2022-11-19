@@ -7,20 +7,21 @@
 //  Stream is a interface present in java.util.stream package.
 //  Stream s = c.stream() // c = collection, stream is a method itself.
 //  Stream need - If we want to process objects from collection.
-//          Stream method - to get the stream
-//          Filter method - Filter takes a predicate as an argument so basically you are validating your input/collection against a condition.
+//          stream() method - to get the stream
+//          filter() method - Filter takes a predicate as an argument so basically you are validating your input/collection against a condition.
 //                          filter(predicate) retrun type is boolen. to perform conditional checks
-//          Map method - For every object if you want to perform some function and you want some result object, we go for map.
+//          map() method - For every object if you want to perform some function and you want some result object, we go for map.
 //                       map(function) to do business logic, or to do some operation, generate some value.
-//          Collect method - Collect the results to list by Collectors.tolist().
-//          Count method - to count how many elements in a stream, we go for count.
-//          Sorted method - for asending order use sorted(). Internally natural sorting order is working by comparable interface which have compateTo() method( i1.compareTo(i2) ).
+//          collect() method - Collect the results to list by Collectors.tolist().
+//          count() method - to count how many elements in a stream, we go for count.
+//          sorted() method - for asending order use sorted(). Internally natural sorting order is working by comparable interface which have compateTo() method( i1.compareTo(i2) ).
 //                          for desending order use comparator operator(its a functional operation).
 //                          (i1,i2) - compare(obj1, obj2)
 //                                  returns +ve if obj1 has to come before obj2 / obj2 has to come before obj1
 //                                  returns -ve if obj1 has to come after obj2 / obj2 has to come after obj1
 //                                  returns 0 if obj1 & obj2 are equal
 //                          Desending - (i1,i2) -> (i1 < i2) ? 1 : (i1 > i2) ? -1 : 0
+//          min() & max() method - 
 //  If you want to be objects, process objects from collection the we should go for stream.
 //  Best advantage of stream/lambda - very consise code (short code/less no of line code).
 
