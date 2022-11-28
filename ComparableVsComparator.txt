@@ -1,0 +1,9 @@
+Comparable & Comparator
+-----------------------
+
+Comparable                                                      Comparator
+---------------------------------------------------------------------------
+Default Natural Sorting order - asendind order                  Customized sorting order
+Present in java.lang                                            java.util
+CompareTo()                                                     Compare(), equals()
+All wrapper classes & string class implements it                Collator, RuleBased Collator uses this. GUI base classes
