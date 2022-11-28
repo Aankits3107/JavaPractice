@@ -1,14 +1,14 @@
 //Lambda Expression
 
 
-//                          Annonymiys Inner Class                                                    //                        Lambda Expression
+//                          Annonymous Inner Class                                                    //                        Lambda Expression
 //      A class without name                                                                          //      It is a function without name(annonymous function)
 //      Can extend abstract & concrete classes                                                        //      Can't extend abstarct & concrete classes
 //      Can implement an interface that contain any number of abstarct method                         //      It implements an interface with single abstarct method(functional inetrface)
-//      We can declare instance cariable in it.                                                       //      We can't declare instace variable in it. whatever veriables are declared are considered as local variable
+//      We can declare instance variable in it.                                                       //      We can't declare instance variable in it. whatever veriables are declared are considered as local variable
 //      They can be instantiated                                                                      //      They can't be instatiatated
 //      'This' always refer to current annonynous inner class object but not outter class object      //      'This' alsways represent current outter class object
-//      Best choice when we handle multiple methods                                                   //      Best choice to handle interface with singke abstarct methods
+//      Best choice when we handle multiple methods                                                   //      Best choice to handle interface with single abstarct methods
 //      A seprate .class file is generated internaly at complie time                                  //      At time of compilation no seprate .class file is generated
 //      Memory will allocated on demand, whenever we create object.                                   //      Reside in permanent memory of JVM (method area)
 
@@ -20,10 +20,10 @@
 // To use APIs very easily & effectively
 // To eanble perallel programming
 // Reduce complexity of anonymous inner class until some extent
-// we can handle function / procedure jult like values
+// we can handle function / procedure just like values
 // We can pass function / procedure as argument
 
-// We can access enclosing class & method variable sdirectly.
+// We can access enclosing class & method variables directly.
 // From lam.ex it is possible to access enclosing class level variables.
 // From lam.ex it is possible to access local variables of enclosing methods.
 // But local variables which are refernced from lam.ex must be final or effectively final. Hence within the lam.ex or outside the lam.ex you can't change the value of local variables which are referned from lam.ex.
