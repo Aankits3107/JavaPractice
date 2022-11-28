@@ -2,7 +2,7 @@
 //---------
 //Collection & Stream:
 //--------------------
-// Coolection is a groupd of objects.
+// Coolection is a group of objects.
 //  Collection need - If we want to represent a group of objects as a single entity then we should go for collection.
 //  Stream is a interface present in java.util.stream package.
 //  Stream s = c.stream() // c = collection, stream is a method itself.
@@ -12,8 +12,8 @@
 //                          filter(predicate) retrun type is boolen. to perform conditional checks
 //          map() method - For every object if you want to perform some function and you want some result object, we go for map.
 //                       map(function) to do business logic, or to do some operation, generate some value.
-//          collect() method - Collect the results to list by Collectors.tolist().
-//          count() method - to count how many elements in a stream, we go for count.
+//          collect() method - Collect the results into a list by Collectors.tolist().
+//          count() method - to count how many elements are in a stream, we go for count.
 //          sorted() method - for asending order use sorted(). Internally natural sorting order is working by comparable interface which have compateTo() method( i1.compareTo(i2) ).
 //                          for desending order use comparator operator(its a functional operation).
 //                          (i1,i2) - compare(obj1, obj2)
@@ -24,7 +24,7 @@
 //                          Comparator() - uses lambda expression, customised sorting order
 //          min() method - to find the min elements in a integer list, according to a comparator.
 //          max() method - to find the max elements in a integer list, according to a comparator.
-// To get array elemenst we can use - 
+// To get array elements we can use - 
 //                          forEach() method - always requires some function (functional interface so, we can send lambda expresion in here) to perform a required activity. For example if we need to access all element of a list. or to print all of them etc.
 //                          toArray() method - to convert stream of objects/elements into arrays.
 //                          Stream.of() method - to get a stream of an array[].
