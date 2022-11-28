@@ -1,0 +1,25 @@
+Hash Map:
+HashMap - is a implementation class of a Map. Map is a collection of key value pair.
+
+Initial buket size 16. Thrash hold value 12. By time it reach 12th size it resize it self.
+
+Maintain a linked list node in data storing.
+
+Node - Hash, Key, Value, Next(it keeps the address of other node).
+
+HashMap<String, Integer> myHashMap = new HashMap<>();
+	myHashMap.put("Physics", 34);
+	myHashMap.put("Chemistry", 40);
+	myHashMap.put("Math", 45);
+					key, value
+
+in storing values internally 'put' method is called,  in a which a 'hashCode' function is called. Which is generating a hash value. which gives a index no where the values will go according to the index no, with a key and value it holds.
+Hash Collision - If a new key value pair is added on the same index then a equalls operation is perform which check the keys are equal or not, if keys are equal then it will replace the value. Otherwise if key is different with a same index then that node is stored in the end node of the linked list.
+
+HashMap comes in collection. It represent Hash Table data structure in key value pairs. Improce the search operation with help of keys through hashing. Complexitiy Ox1.
+
+HashMap implements Arrays & Linked list.
+
+HashMap is not thread safe.
+
+Use of HashMap in a multiThread application - because multi threads can change the value of a object.
