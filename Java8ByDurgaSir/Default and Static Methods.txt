@@ -1,7 +1,7 @@
 Default Methods & Static Methods:
 ---------------------------------
 
-    Until 1.7 version - every method present inside interface is always - public & abstract, whether we are declaring or not.
+    Until 1.7 version - every method present inside interface is always - public & abstract, whether we are declaring it or not.
     -----------------        
         void m1();
         public void m1();
@@ -12,25 +12,24 @@ Default Methods & Static Methods:
     ------------
         Default methods and static methods are allowed.
 
-    1.9 versio:
+    1.9 version:
     -----------
         private methods are also allowed.
 
     Variables: 
     ----------
-        Inside interface variables are always public / static / final
+        Inside interfaces, variables are always public / static / final
 
-package Java8ByDurgaSir;
 
 Default Method - Virtual Extention Method - Defender Method:
 ------------------------------------------------------------
     Need of default method.
 
-        interface I{
+        interface I {
             public void m1();
             public void m2();
-            public void m3(); //new mthod added. But now code will not complie, bcz every implemntation class compulsory should provide implementation. Already m1 & m2 are implemented not m3, will give error.
-            default void m4(){ System.out.println("Default Method"); }
+            public void m3(); //new method added. But now code will not complie, bcz every implemntation class compulsory should provide implementation. Already m1 & m2 are implemented not m3,  it will give error.
+            default void m4() { System.out.println("Default Method"); }
         }
         class Test1 implements I {
             public void m1(){ }
@@ -45,7 +44,7 @@ Default Method - Virtual Extention Method - Defender Method:
             public void m2(){ }
         }
 Any no of implementation of interface calling is possible.
-Once interface is defined and its implemented with the method in other classes, then its not allowed to add a new mthod in the interface.
+Once interface is defined and its implemented with the method in other classes, then its not allowed to add a new method in the interface.
 Without affecting implementation class, if we want to add new method, default method is use in interface. Then its upto us to use that default method or not. (Dummy implementation).
 This is not a 'default modifier' bcz this method having default implementation.
 
@@ -66,7 +65,7 @@ This is not a 'default modifier' bcz this method having default implementation.
 
 Static Method:
 --------------
-    They are not nowhere related to class/object terminalogy.
+    They are no where related to class/object terminalogy.
 
         interface Inter {
             public static void m1() { Syetem.out.println("Static Method"); }
