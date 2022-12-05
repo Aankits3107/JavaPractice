@@ -13,7 +13,7 @@ HashMap<String, Integer> myHashMap = new HashMap<>();
 	myHashMap.put("Math", 45);
 					key, value
 
-in storing values internally 'put' method is called,  in a which a 'hashCode' function is called. Which is generating a hash value. which gives a index no where the values will go according to the index no, with a key and value it holds.
+in storing values internally 'put' method is called,  in which a 'hashCode' function is called. Which is generating a hash value. which gives a index no where the values will go according to the index no, with a key and value it holds.
 Hash Collision - If a new key value pair is added on the same index then a equalls operation is perform which check the keys are equal or not, if keys are equal then it will replace the value. Otherwise if key is different with a same index then that node is stored in the end node of the linked list.
 
 HashMap comes in collection. It represent Hash Table data structure in key value pairs. Improce the search operation with help of keys through hashing. Complexitiy Ox1.
