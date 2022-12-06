@@ -1,0 +1,60 @@
+Exception vs Error
+------------------
+
+Comes under throwable.
+Throwable is not a interface but a class for exception handling.
+It have two child classes - 1. Exception, 2, Error
+
+                                                                Throwable
+----------------------------------------------------------------------------------------------------------------------------
+Exception                                                                                                            Error
+---------                                                                                                            ------
+Exceptions are caused by code/program.                                                                               Error are not caused by code/program.
+Exceptions are recoverable (handling it).                                                                            Error are non-recoverable (can'r be handled ).
+    use try catch.                                                                                                        Caused by lack of system resources. ie. not enough stack memory, network issue, VM error
+
+RuntimeException                        IOException             InterruptedException    RemoteException              VirtualMachineError        LinkageError    AssertionError      ExceptionInInitializerError
+----------------                        -----------             --------------------    ---------------              -------------------        ------------    --------------      ---------------------------
+ArithmaticException                     EndOfFileException                                                           StackOverFlowError         VerifyError
+NullPointerException                    FileNotFoundException                                                        OutOfMemoryError
+ClassCachedException
+IndexOutOfBoundException
+    ArrayIndexOutofBoundException
+    StringIndexOutOfBoundException
+IllegalArgumentException
+    NumberFormatException
+
+
+
+Checked vs Unchecked Exception
+------------------------------
+
+Checked
+-------
+Checked exception have 'throws' keyword.
+The exceptions which are checked by the compiler for smooth executiuon of the program at runtime. Whether the program is handling or not.
+
+FileNotFoundException
+---------------------
+import java.io.*;
+class Test {
+    public static void main(String[] args) {
+        PrintWriter pw = new PrintWriter("abc.txt");
+        pw.println("Hello");
+    }
+}
+error: unreported exception FileNotFoundException must be caught or declare to be thrown.
+        PrintWriter pw = new PrintWriter("abc.txt");
+Use try catch or declare throws expetion in class.
+
+IntruptedException
+------------------
+class Test {
+    public static void main(String[] args) {
+            System.out.println("I want to sleep peacefully");
+        Thread.sleep(1000); //every java program compulsary contain 1 thread. i.e. main thread.
+    }
+}
+If main thread entered into the spleep. Java give error. Because other threads will intrupt this.
+error: unreported exception IntruptedException must be caught or declare to be thrown.
+        Thread.sleep(1000);
