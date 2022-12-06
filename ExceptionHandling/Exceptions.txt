@@ -85,3 +85,63 @@ Throwables are Partially Checked Exception.
 Exceptions are partially checked, because they are checked but some of its child are unchecked.
 Partial Checked are those, whose child exceptions are unchecked.
 Fully Checked are those whose parent class is checked and their child exceptions are also checked.
+
+
+Try-Catch Control Flow
+-----------------------
+                        statement-0;
+                        try {
+                            statement-1;
+                            statement-2;
+                            statement-3;
+                        }
+                        catch(exception e) {
+                            statement-4
+                        }
+                        statement-5;
+case-1 If there is no exception. All the statements will excecute normally except catch block.
+            Because no exception raised no need for catch.
+case-2 If as exception raised at statement-2 and corresponding catch block matched, statement 4 is executed.
+            Because after a exception catch block is executed and after that try block don't execute again, the remaining code will execute after the catch.
+case-3 If an exception raised at statement-2 and corresponding catch block not matched. 
+            Program will stop abnormally as no handler is present.
+case-4 If an exception raised at catch block or after it.
+            Beacuse its not part of a try catch block, it is as abnormal termination, program will stop.             
+
+Methods to print exceptions information
+---------------------------------------
+                        class Test {
+                            public static void main(String[] args) {
+                                try {
+                                    System.out.println(10/0);
+                                }
+                                catch(ArithmaticException e) {
+                                    // e.printStackTrace();
+                                    // System.out.println(e);
+                                    // System.out.println(e.toString);
+                                    System.out.println(e.getMessage());
+                                }
+                            }
+                        }
+1. e.printStackTrace()
+----------------------
+This will tell the name of exception folloewed by it's discription and the stak trace of the error.
+By default this is used. By the dfault exception handler.
+It has print statement internally so no need for system.out.println.
+
+2. e.toString() or e
+--------------------
+This will give only name & discription for the error.
+These are toString methods so need to print by system.out.println.
+
+3. e.getMessage()
+-----------------
+This will only give the discription of error.
+These are toString methods so need to print by system.out.println.
+
+
+'Throw' keyword
+---------------
+Used for Customised, user defined exceptions. Not for pre-defined exception.
+To handle our created exception object to the JVM manually.
+These are toString methods so need to print by system.out.println.
