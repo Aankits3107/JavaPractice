@@ -17,7 +17,7 @@ Exceptions are partially checked, bcz its child classes few are checked few are 
 RuntimeException                    IOException                 InterruptedException        RemoteException            VirtualMachineError        LinkageError    AssertionError      ExceptionInInitializerError
 ----------------                    -----------                 --------------------        ---------------            -------------------        ------------    --------------      ---------------------------
 'Unchecked exception'               'Fully Checked exception'   'Fully Checked exception'   'Fully Checked exception'  StackOverFlowError         VerifyError
-ArithmaticException                 EndOfFileException                                                                 OutOfMemoryError
+ArithmeticException                 EndOfFileException                                                                 OutOfMemoryError
 NullPointerException                FileNotFoundException                                                              
 ClassCachedException
 IndexOutOfBoundException
@@ -79,6 +79,7 @@ error: Exception in thread 'main' java.lang.AirthmeticException: /by zero
         at Test.main(Test.java.5)
 
 
+
 Partially Checked and Fully Checked Exception
 ---------------------------------------------
 Throwables are Partially Checked Exception.
@@ -87,8 +88,9 @@ Partial Checked are those, whose child exceptions are unchecked.
 Fully Checked are those whose parent class is checked and their child exceptions are also checked.
 
 
-Try-Catch Control Flow
------------------------
+
+Control Flow in Try-Catch
+-------------------------
                         statement-0;
                         try {
                             statement-1;
@@ -108,21 +110,23 @@ case-3 If an exception raised at statement-2 and corresponding catch block not m
 case-4 If an exception raised at catch block or after it.
             Beacuse its not part of a try catch block, it is as abnormal termination, program will stop.             
 
+
+
 Methods to print exceptions information
 ---------------------------------------
-                        class Test {
-                            public static void main(String[] args) {
-                                try {
-                                    System.out.println(10/0);
-                                }
-                                catch(ArithmaticException e) {
-                                    // e.printStackTrace();
-                                    // System.out.println(e);
-                                    // System.out.println(e.toString);
-                                    System.out.println(e.getMessage());
-                                }
-                            }
-                        }
+                                    class Test {
+                                        public static void main(String[] args) {
+                                            try {
+                                                System.out.println(10/0);
+                                            }
+                                            catch(ArithmeticException e) {
+                                                e.printStackTrace();
+                                                // System.out.println(e);
+                                                // System.out.println(e.toString);
+                                                // System.out.println(e.getMessage());
+                                            }
+                                        }
+                                    }
 1. e.printStackTrace()
 ----------------------
 This will tell the name of exception folloewed by it's discription and the stak trace of the error.
@@ -140,8 +144,211 @@ This will only give the discription of error.
 These are toString methods so need to print by system.out.println.
 
 
+
+Control Flow in Try-Catch-Finaly
+--------------------------------
+                                try {
+                                    statement-1;
+                                    statement-2;
+                                    statement-3;
+                                }
+                                catch(exception e) {
+                                    statement-4;
+                                }
+                                finally {
+                                    statement-5;
+                                }
+                                statement-6;
+case-1 If there is no exception.
+        All stateemnts will exceute. Normal terminaltion.
+case-2 If exception at statement-2 and coresponding catch block matched.
+        Statement-1 will execute and the xoresponding catch block statement-4 will trigger, and statement-5,6 will also execute.
+case-3 If exception at statement-2 and coresponding catch block not matched.
+        Statement-1 will execute, corresponding catch not found program will terminate abnormally & statement-5 will execute. Because finally always executes.
+case-3 If exception raised at statement-4.
+        Abnormal termination, as its not part of try block. Before this finally will be executed.
+case-5 If an exception raised at statement-5.
+        Outside of try block it is always abnormal termination. Even 4, 5, 6. Abnormal Termination.
+
+
+
+Throw vs Throws
+---------------
+
 'Throw' keyword
 ---------------
 Used for Customised, user defined exceptions. Not for pre-defined exception.
 To handle our created exception object to the JVM manually.
-These are toString methods so need to print by system.out.println.
+            withdraw(double amount) {
+                if(amount > balance) {
+                    throw new InsufficientFundException();
+                }
+            }
+
+Programmer create a custom exception object, and throw to JVM to catch it.
+ 
+ internal working
+ ----------------
+        class Test {
+            public static void main(String[] args) {
+                System.out.println(10/0);
+            }
+        }
+error: exception in thread "main" java.lang.ArithmeticException /by zero.
+        at Test.main();
+
+manual working/exputsitly
+-------------------------
+        class Test {
+            public static void main(String[] args) {
+                throw new ArithmeticException("/ by zero"); //created a object for exception and throw it into the JVM, manually.
+                    System.out.println(10/0);
+            }
+        }
+error: exception in thread "main" java.lang.ArithmeticException /by zero.
+        at Test.main();
+
+Cases for throw keyword
+-----------------------
+case-1
+------
+    class Test {
+        static ArithmeticException ae = new ArithmeticException();
+        public static void main(String[] args) {
+            throw ae;
+        }
+    }
+we get RuntimeException - ArithmeticException.
+error: exception in thread "main" java.lang.ArithmeticException /by zero.
+        at Test.main();
+
+    class Test {
+        static ArithmeticException ae;
+        public static void main(String[] args) {
+            throw ae;
+        }
+    }
+RuntimeException - NullPointerException. because exceptions have null constructors also. Because here ae is null and not pointing towards any object.
+error: exception in thread "main" java.lang.NullPointerException.
+        at Test.main();
+
+case-2
+------
+    class Test {
+        public static void main(String[] args) {
+            System.out.println(10/0);
+            System.out.println("Hello");
+        }
+    }
+we get RuntimeException - ArithmeticException.
+error: exception in thread "main" java.lang.ArithmeticException /by zero.
+        at Test.main();
+
+    class Test {
+        public static void main(String[] args) {
+            throw new ArithmeticException("/ by zero");
+                System.out.println("Hello");
+        }
+    }
+compile time error - unrechable statement.
+error: unrechable statement
+    System.out.println("Hello");
+
+case-3
+------
+    class Test {
+        public static void main(String[] args) {
+            throw new Test();
+        }
+    }
+compile time error incompatible types found.
+error: incompatible types: Test cannot be converted to throwable
+        throw new Test();
+
+throw keyword only applicable for exceptions and error. Only for throwable types.
+
+    class Test extends RuntimeException {
+        public static void main(String[] args) {
+            throw new Test();
+        }
+    }
+exception in thread "main".
+error: exception in thread "main" Test
+        at Test.main();
+
+
+Throws keyword
+--------------
+To delegate(transfer) the resposibity of exception handling to the caller.
+Throws keyword required only to convince compiler.
+Throws only required for checked exception.
+
+                import java.io.*;
+                class Test {
+                    public static void main(String[] args)
+                        PrintWriter pw = new PrintWriter("abc.txt");
+                        pw.println("Hello");
+                }
+compile time error unexcpeted exception
+error: unreported exception FileNotFoundException, must cought or declare to be thrown
+        PrintWriter pw = new PrintWriter("abc.txt");
+    
+                class Test {
+                    public static void main(String[] args)
+                    Thread.sleep(1000);
+                        System.out.println("I spleed happily");
+                }
+Main thread entered into the spleep. Java give error. Because other threads will intrupt this.
+error: unreported exception IntruptedException must be caught or declare to be thrown.
+        at Thread.sleep(1000);
+
+1. use try-catch to handle this situation.
+                class Test {
+                    public static void main(String[] args) {
+                        try {
+                            Thread.sleep(1000);
+                        }
+                        catch(IntruptedException e) {
+
+                        }
+                    }
+                }
+
+2. use throws keyword to handle.
+                class Test {
+                    public static void main(String[] args) throws IntruptedException() {
+                        Thread.sleep(1000);
+                    }
+                }
+Now the caller(JVM) is responsible to handle the exception.
+Even though we are useing throws keyword, program can terminate abnormally. So use try catch approch to handle exceptions.
+
+
+
+Final, Finally, Finalized
+-------------------------
+Final
+-----
+classes - no one can extend this class. If we try to extend it we get complie time error.
+methods - we can't override that method in the child class.
+variables - we can't change it's value, it become constant.
+
+Finally
+-------
+A block associated with try-catch.
+It always executed if exception occur or not.
+try {
+    risky code
+}
+catch() {
+    handling code
+}
+finally {
+    cleanup code / resource deallocation code
+}
+
+Finalized
+---------
+It is a method, associated with garbage collector.
+If an object dosn't have any refernce variable it's always eligible for garbage collector.
+Once it's executed it will destroyed by GC.
