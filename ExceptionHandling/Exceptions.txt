@@ -352,3 +352,8 @@ Finalized
 It is a method, associated with garbage collector.
 If an object dosn't have any refernce variable it's always eligible for garbage collector.
 Once it's executed it will destroyed by GC.
+
+Difference between Finally & Finalized
+---------------------------------------
+Finalized meant for object related cleanup activity
+Finally meant for try block open resources activity.
