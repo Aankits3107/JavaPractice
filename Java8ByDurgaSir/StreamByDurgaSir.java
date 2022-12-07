@@ -156,3 +156,32 @@ public class StreamByDurgaSir {
         }
     }
 }
+
+//Predicate interfaces - It compulsary take input type arrgument and return boolean. //boolean test(T t)
+//
+//Functional interface - It take input type argument and return value. R apply(T t)
+//
+//Consumer interface - It compulsary take some type arrgument. It contain abstarct method 'accept'. And it won't return anything. //void accept(T t).
+// import java.util.function.Consumer;
+// public class Test{
+//     public static void main(String[] args) {
+//         Consumer<String> c = s -> System.out.println(s);
+//         c.accept("Hello");
+//         c.accept("Ankit Sharma");
+//     }
+// }
+//
+//Supplier interface - It always gonna provide/return vlaye. It won't take any input (not input type, but return type parameter). //get()
+// import java.util.function.Supplier;
+// public class Test{
+//     public static void main(String[] args) {
+//         Supplier<String> s = () -> {
+//                                     String[] s1 = {"Sunny", "Bunny","Honey"};
+//                                     int x = (int)(Math.random() * 3 + 1);
+//                                     return s1[x];
+//                                 };
+//         System.out.println(s.get());
+//         System.out.println(s.get());
+//         System.out.println(s.get());
+//     }
+// }
