@@ -1,0 +1,28 @@
+ConcurentHash Map
+-----------------
+
+Underlying data structure in HashTable
+
+It's Thread safe
+
+TO perform any read operation Thread won't require any lock.
+    But to perform update operation thread lock is required (Bucket level lock) only on a perticular part of the map.
+
+Instead of whole Map, concurrent Map is divided into small partitions which is defined by concurrent level.
+
+Default size is 16.
+
+Simultanious Read & Write operations.
+
+Null is not allowed for both key & value.
+
+While on ethread iterating the other thread can perform update operation
+    & concurrent map dosn't throw concurrentModificationException.
+
+Constructor
+-----------
+ConcurrentHashMap cm = new ConcurrentHashMap();
+        "            =          "(initial capacity);
+        "            =          "(initial capacity, float fill ratio);
+        "            =          "(initial capacity, float fill ratio, initial concurency level);
+        "            =          "(Map m);
