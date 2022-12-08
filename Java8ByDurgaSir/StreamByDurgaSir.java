@@ -189,7 +189,7 @@ public class StreamByDurgaSir {
 // Stream operations are combined into pipelines to process streams.
 // All operations are either intermediate or terminal.
 
-// intermediate operations
+// Intermediate operations
 // -----------------------
 // Those operations which return STREAM itseld, allowing for further operations on a stream.
 // These streams are always LAZY. i.e, they do not process the stream at the call site.
