@@ -185,3 +185,19 @@ public class StreamByDurgaSir {
 //         System.out.println(s.get());
 //     }
 // }
+
+// Stream operations are combined into pipelines to process streams.
+// All operations are either intermediate or terminal.
+
+// intermediate operations
+// -----------------------
+// Those operations which return STREAM itseld, allowing for further operations on a stream.
+// These streams are always LAZY. i.e, they do not process the stream at the call site.
+//         an intermediate operatio  can only process data when there is a terminal operation.
+//         eg: filter, map, flatMap.
+
+// Terminal operations
+// -------------------
+// They terminate the pipeline & initate stream processing.
+// They stream is passed through all intermediate operations during terminal operation call.
+//     eg: forEach, reduce, collect, sum.
