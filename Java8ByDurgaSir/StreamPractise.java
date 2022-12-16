@@ -65,5 +65,10 @@ public class StreamPractise {
         // 11. Character Occurence in a String
         Map<String, Long> occurenceOfCharacter = Arrays.stream(myString.split("")).map(String::toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap::new, Collectors.counting()));  
             System.out.println("Character occurence: " + occurenceOfCharacter);
+
+        // 12. Max salary department wise.
+        // Comparator<Employee> compareBySalary = Comparator.comparing(Employee::getSalary);
+        // Map<String, Optional<Employee>> employeeMap = employee.stream().collect(groupingBy(Employee::getDept, Collectors.reducing(BinaryOperator.maxBy(compareBySalary))));
+        //     System.out.println("Deplartment wise Max salary: " + employeeMap);
     }  
 }  
