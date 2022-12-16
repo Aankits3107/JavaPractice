@@ -171,7 +171,7 @@ public class StreamByDurgaSir {
 //     }
 // }
 //
-//Supplier interface - It always gonna provide/return vlaye. It won't take any input (not input type, but return type parameter). //get()
+//Supplier interface - It always gonna provide/return value. It won't take any input (not input type, but return type parameter). //get()
 // import java.util.function.Supplier;
 // public class Test{
 //     public static void main(String[] args) {
