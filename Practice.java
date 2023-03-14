@@ -50,10 +50,8 @@ public class Practice {
 
     //Department Filter
     String departmentFilter = "Software";
-
     List<Employee> filterEmployees = employees.stream().filter(s -> s.getDepartment().equals(departmentFilter)).collect(Collectors.toList());
       System.out.println("Showing Employess in " + departmentFilter +":");
-
     for(Employee emp : filterEmployees){
       System.out.println(emp.getName());
     }
@@ -62,7 +60,6 @@ public class Practice {
     Map<String, Optional<Employee>> maxSalary = employees.stream().collect(Collectors.groupingBy(Employee :: getDepartment,
                                                                    Collectors.maxBy(Comparator.comparing(Employee :: getSalary))));
       System.out.println("Max salry of Employee by Department: ");
-
     maxSalary.forEach((department, employee) -> {
       System.out.println(department + " " + employee.get().getName() + " " + employee.get().getSalary());
     });
@@ -71,7 +68,6 @@ public class Practice {
     Map<String, Optional<Employee>> minSalary = employees.stream().collect(Collectors.groupingBy(Employee :: getDepartment,
                                                                    Collectors.minBy(Comparator.comparing(Employee :: getSalary))));
       System.out.println("Max salry of Employee by Department: ");
-
     minSalary.forEach((department, employee) -> {
       System.out.println(department + " " + employee.get().getName() + " "+ employee.get().getSalary());
     });
@@ -96,11 +92,9 @@ public class Practice {
 
     //Character Occurence Counter
     String myString = "Hello Hi";
-
     Map<String, Long> charCount = Arrays.stream(myString.split("")).map(String :: toLowerCase).collect(Collectors.groupingBy(s -> s,
                                                                                                   LinkedHashMap :: new, Collectors.counting()));
       System.out.println(charCount);
-
   }
 
 }
