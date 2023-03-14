@@ -81,7 +81,8 @@ public class Practice {
       System.out.println("N'th Highest Salary: "+ nHighestSalry);
 
     //Average age of Male/Female
-    Map<String, Double> averageAge = employees.stream().collect(Collectors.groupingBy(Employee :: getGender, Collectors.averagingInt(Employee :: getAge)));
+    Map<String, Double> averageAge = employees.stream().collect(Collectors.groupingBy(Employee :: getGender,
+                                                        Collectors.averagingInt(Employee :: getAge)));
       System.out.println("Average of Male/Female: "+ averageAge);
 
     //Number of Employees in Each department
@@ -92,7 +93,7 @@ public class Practice {
     List<String> distinctDepartment = employees.stream().map(Employee :: getDepartment).distinct().collect(Collectors.toList());
       System.out.println("Distinct Departments: " +distinctDepartment);
 
-      
+
     //Character Occurence Counter
     String myString = "Hello Hi";
 
