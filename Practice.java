@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -61,6 +62,12 @@ public class Practice {
     minSalary.forEach((department, employee) -> {
       System.out.println(department + " " + employee.get().getName() + " (" + employee.get().getSalary() + ")");
     });
+
+
+    String myString = "Hello Hi";
+
+    Map<String, Long> charCount = Arrays.stream(myString.split("")).map(String :: toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap :: new, Collectors.counting()));
+      System.out.println(charCount);
 
   }
 
