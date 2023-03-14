@@ -40,6 +40,8 @@ public class Practice {
                                              new Employee ("Sunny", "Software", 1800000, 29),
                                              new Employee ("Pallavi", "Pharma", 1250000, 30),
                                              new Employee ("Dev", "Marketing", 1400000, 26));
+
+    //Department Filter
     String departmentFilter = "Software";
 
     List<Employee> filterEmployees = employees.stream().filter(s -> s.getDepartment().equals(departmentFilter)).collect(Collectors.toList());
@@ -49,21 +51,23 @@ public class Practice {
       System.out.println(emp.getName());
     }
 
+    //Max Salry Filter
     Map<String, Optional<Employee>> maxSalary = employees.stream().collect(Collectors.groupingBy(Employee :: getDepartment, Collectors.maxBy(Comparator.comparing(Employee :: getSalary))));
       System.out.println("Max salry of Employee by Department: ");
 
     maxSalary.forEach((department, employee) -> {
-      System.out.println(department + " " + employee.get().getName() + " (" + employee.get().getSalary() + ")");
+      System.out.println(department + " " + employee.get().getName() + " " + employee.get().getSalary());
     });
 
+    //Min Slary Filter
     Map<String, Optional<Employee>> minSalary = employees.stream().collect(Collectors.groupingBy(Employee :: getDepartment, Collectors.minBy(Comparator.comparing(Employee :: getSalary))));
       System.out.println("Max salry of Employee by Department: ");
 
     minSalary.forEach((department, employee) -> {
-      System.out.println(department + " " + employee.get().getName() + " (" + employee.get().getSalary() + ")");
+      System.out.println(department + " " + employee.get().getName() + " "+ employee.get().getSalary());
     });
 
-
+    //Character Occurence Counter
     String myString = "Hello Hi";
 
     Map<String, Long> charCount = Arrays.stream(myString.split("")).map(String :: toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap :: new, Collectors.counting()));
