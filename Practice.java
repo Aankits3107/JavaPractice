@@ -7,11 +7,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 class Employee {
+  
   private String name;
   private String department;
   private int salary;
   private int age;
   private String gender;
+  
   public String getName() {
     return name;
   }
