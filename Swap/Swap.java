@@ -15,7 +15,7 @@ public class Swap {
     }
 }
 
-
+//Swap first 1,2. then 3,4. and print in reverse order.
 // public class ArraySwap {
 //     public static void main(String[] args) {
 //         char[] arr = {'a', 'b', 'c', 'd'};
