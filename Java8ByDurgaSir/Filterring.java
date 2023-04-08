@@ -29,5 +29,14 @@ public class Filterring {
 		List<String> course1Students = students.stream().flatMap(map -> map.entrySet().stream()).filter(s -> s.getValue().equals("Course_1")).
 																									 map(s -> s.getKey()).collect(Collectors.toList());
 			System.out.println("Students with Course_1: " + course1Students);
+
+
+
+		// List<String> s = List.of("Jay", "Amit", "Raj", "Ashok", "Jayesh");
+
+		// Map<String, List<String>> result = s.stream().filter(str -> str.startsWith("A")).collect(Collectors.groupingBy(str -> "A"));
+	
+		// 	System.out.println(result);
+
 		}
 }
