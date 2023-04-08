@@ -27,7 +27,7 @@ public class Filterring {
 		students.add(data);
 	
 		List<String> course1Students = students.stream().flatMap(map -> map.entrySet().stream()).filter(s -> s.getValue().equals("Course_1")).
-																									 map(s -> s.getKey()).collect(Collectors.toList());
+										map(s -> s.getKey()).collect(Collectors.toList());
 			System.out.println("Students with Course_1: " + course1Students);
 
 
